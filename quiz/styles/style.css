@@ -100,18 +100,26 @@ header{
   line-height: 1.5;
   margin-top: 24px;
 }
+
+.quizPeople{
+  align-items: center;
+}
+
 .quizOneImg{
-  margin: 64px  0;
+  margin: 64px  ;
     max-width: 718px;
 }
 .quizAnswer{
+  width: 40px;
+  height: 58px;
   background-color: #e34e70;
   border-radius: 8px;
   padding: 8px 16px;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 36px;
-  line-height: 150%;
+  line-height: normal;
+  text-align: center;
 }
 .quizAnswerWrapper{
   display: flex;
@@ -136,6 +144,10 @@ header{
 }
 .quizChoice:hover{
 
+}
+
+.is-selected{
+  background-color: #abd9e7;
 }
 .quizCiteBox{
   display: flex;
