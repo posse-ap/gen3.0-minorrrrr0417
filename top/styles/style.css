@@ -219,6 +219,7 @@ border-radius: 48px;
   line-height: 8px;
   color: #666666;
   left: 320px;
+  line-height: 40px;
 }
 .fixedBanner{
   display: flex;

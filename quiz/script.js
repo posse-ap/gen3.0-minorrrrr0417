@@ -71,7 +71,6 @@ let quiz =[
 
 function create_quiz(i){
   const quiz_area = document.getElementById("quizSection");
-  
   const quiz_html =`<div class="quizWrapper">`
                     +`<div class="quizContents">`                 
                       +`<h2 class="quizNumber" id="question_number_js"> Q${i+1}</h2>`
@@ -95,7 +94,18 @@ function create_quiz(i){
                           +`<i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>`   
                         +`</li>`
                       +`</ul>` 
-                      +`<div id="answerWrapper"></div>` 
+                      +`<div id="answerWrapper">`
+                      +`<div class="correctWrapper">`
+                      +`<div class = "correct">正解！</div>
+                      <div class = "correctA">A</div>
+                      <div class = "correctAnswer">${quiz[i].answer}</div>
+                    </div>`
+                    +`<div class="wrongWrapper">`
+                    +`<div class = "wrong">不正解！</div>`
+                    +`<div class = "wrongA">A</div>`
+                    +`<div class = "wrongAnswer">${quiz[i].answer}</div>`
+                  +`</div>`
+                    +`</div>` 
                       +`<div>${quote_area(i)}</div>`
                     +`</div>`;
 
@@ -141,42 +151,29 @@ const correct_choice =quiz.answer
 
 
 
-quiz.forEach(question => {
-  
-  
-  const btn = document.querySelectorAll(`.quizChoice`);
+// quiz.forEach(question => {
+  const buttons = document.querySelectorAll(`.quizChoice`);
   const answer_area = document.getElementById(`answerWrapper`);
-  const question_number = Number(document.getElementById(`question_number_js`));
+  // const question_number = document.getElementById(`question_number_js`);
   
-  btn.forEach(answer =>{
-    let correct_html = `<div class="correctWrapper">
-                      <div class = "correct">正解！</div>
-                      <div class = "correctA">A</div>
-                      <div class = "correctAnswer">${selectedAnswerNumber}</div>
-                    </div>`;
+  buttons.forEach(button =>{
 
-    let wrong_html = `<div class="wrongWrapper">
-                    <div class = "wrong">正解！</div>
-                    <div class = "wrongA">A</div>
-                    <div class = "wrongAnswer">${selectedAnswerNumber}</div>
-                  </div>`; 
-                                  
-    answer.addEventListener(`click`, () => {
-      answer.classList.add(`is-selected`);
-      // const selectedAnswerNumber = Number(answer.getAttribute(''));
+    button.addEventListener(`click`, () => {
+      button.classList.add(`is-selected`);
       
       // setDisabled(answers);
-
-      const correctAnswer = ALL_QUIZ[question_number].correctNumber
-        if ( correctAnswer === selectedAnswerNumber){
-          main.insertAdjacentHTML(beforeend,correct_html)
-        }else{
-          main.insertAdjacentHTML(beforeend,wrong_html)
-        };
+      // const correctAnswer = ALL_QUIZ[question_number].correctNumber
+      //   if ( correctAnswer === selectedAnswerNumber){
+      //     main.insertAdjacentHTML(beforeend,correct_html)
+      //   }else{
+      //     main.insertAdjacentHTML(beforeend,wrong_html)
+      //   };
     })
-    forEach(answer);
+    // forEach(answer);
   })
 
+
+  
 //   if (event.target===quiz.answer){
 //   return correct_html;
 // }else{
@@ -184,7 +181,10 @@ quiz.forEach(question => {
 // }
 
 
-})
+// })
+for(let i = 0; i < quiz.length; i++) { 
+  create_quiz(i);
+  }
 // forEach(quiz);
 // function option_btn(i){
 //   correct_choice= quiz[i].answer;
@@ -256,9 +256,7 @@ quiz.forEach(question => {
 // // main.insertAdjacentHTML("beforeend",choice);
 
 
-for(let i = 0; i < quiz.length; i++) { 
-create_quiz(quiz[i]);
-}
+
 
 // create_quiz(0);
 

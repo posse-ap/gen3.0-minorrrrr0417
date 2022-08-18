@@ -142,9 +142,9 @@ header{
   background: #FFFFFF;
   cursor: pointer;
 }
-.quizChoice:hover{
 
-}
+
+
 
 .is-selected{
   background-color: #abd9e7;
@@ -160,6 +160,13 @@ header{
   font-weight: 700;
   font-size: 18px;
   line-height: 180%;
+}
+
+.correctWrapper{
+  display: none;
+}
+.wrongWrapper{
+display: none;
 }
 
 
