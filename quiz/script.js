@@ -72,43 +72,51 @@ let quiz =[
 function create_quiz(i){
   const quiz_area = document.getElementById("quizSection");
   const quiz_html =`<div class="quizWrapper">`
-                    +`<div class="quizContents">`                 
-                      +`<h2 class="quizNumber" id="question_number_js"> Q${i+1}</h2>`
-                      +`<h4 class="quizDescription">${quiz[i].question}</h4>`
-                    +`</div>`
-                    +`<div class ="quizPeople">`
-                      +`<img src='/img/quiz/${i}.png' class="quizOneImg">`
-                    +`</div>`
-                    +`<div class="quizAnswer">A</div>`
+                      +`<div class="quizContents">`                 
+                        +`<h2 class="quizNumber" id="question_number_js"> Q${i+1}</h2>`
+                        +`<h4 class="quizDescription">${quiz[i].question}</h4>`
+                      +`</div>`
+                      +`<div class ="quizPeople">`
+                        +`<img src='/img/quiz/${quiz[i].number}.png' class="quizOneImg">`
+                      +`</div>`
+                      +`<div class="quizAnswer">A</div>`
                       +`<ul class="quizAnswerWrapper">`
-                        +`<li>`
-                          +`<button class="quizChoice" >${quiz[i].option1}</>`
-                          +`<i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>`   
-                        +`</li>`
-                        +`<li>`
-                          +`<button class="quizChoice" >${quiz[i].option2}</>`
-                          +`<i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>`   
-                        +`</li>`
-                        +`<li>`
-                          +`<button class="quizChoice" >${quiz[i].option3}</button>`
-                          +`<i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>`   
-                        +`</li>`
+                          +`<li>`
+                            +`<button class="quizChoice quizChoice${i}" id="option${i}-1" >${quiz[i].option1}`
+                            +`<i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>`   
+                          +`</li>`
+                          +`<li>`
+                            +`<button class="quizChoice quizChoice${i}" id="option${i}-2" >${quiz[i].option2}`
+                            +`<i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>`   
+                          +`</li>`
+                          +`<li>`
+                            +`<button class="quizChoice quizChoice${i}" id="option${i}-3">${quiz[i].option3}`
+                            +`<i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>`   
+                          +`</li>`
                       +`</ul>` 
-                      +`<div id="answerWrapper">`
-                      +`<div class="correctWrapper">`
-                      +`<div class = "correct">正解！</div>
-                      <div class = "correctA">A</div>
-                      <div class = "correctAnswer">${quiz[i].answer}</div>
-                    </div>`
-                    +`<div class="wrongWrapper">`
-                    +`<div class = "wrong">不正解！</div>`
-                    +`<div class = "wrongA">A</div>`
-                    +`<div class = "wrongAnswer">${quiz[i].answer}</div>`
-                  +`</div>`
-                    +`</div>` 
-                      +`<div>${quote_area(i)}</div>`
-                    +`</div>`;
+                      
+                    +`<div class="correctWrapper" id="correctArea${i}">`
+                      +`<div class="contentsPosition">`
+                        +`<div class = "correct">正解！</div>`
+                        +`<div class = "answerAreaPosition">`
+                          +`<div class = "correctA">A</div>`
+                          +`<div class = "correctAnswer" >${quiz[i].correctAnswer}</div>`
+                        +`</div>`
+                      +`</div>`
+                    +`</div>`
+                    
+                    +`<div class="wrongWrapper" id="wrongArea${i}">`
+                      +`<div class="contentsPosition">`
+                        +`<div class = "wrong">不正解...</div>`
+                        +`<div class = "answerAreaPosition">`
+                          +`<div class = "wrongA">A</div>`
+                          +`<div class = "wrongAnswer">${quiz[i].correctAnswer}</div>`
+                        +`</div>`
+                      +`</div>`
+                    +`</div>`
+                    +`<div>${quote_area(i)}</div>`
 
+                    
   return quiz_area.insertAdjacentHTML("beforeend",quiz_html);
   
 }
@@ -121,6 +129,7 @@ function quote_area(i){
                     +`<img src="/img/icon/icon-note.svg" alt="">`
                     +`<div class="referenceArea">${quiz[i].quote}</div>`
                   +`</div>`;
+                  +`</div>`;
     if(quiz[i].quote){
                     return quote_html;
                   }else{
@@ -130,151 +139,101 @@ function quote_area(i){
 
 
 // 正誤判定
-// let correct_choice;
-const correct_choice =quiz.answer   
-
-// let correct_html = `<div class="correctWrapper">
-//                       <div class = "correct">正解！</div>
-//                       <div class = "correctA">A</div>
-//                       <div class = "correctAnswer">${selectedAnswerNumber}</div>
-//                     </div>`;
-
-
-
-// let wrong_html = `<div class="wrongWrapper">
-//                     <div class = "wrong">正解！</div>
-//                     <div class = "wrongA">A</div>
-//                     <div class = "wrongAnswer">${selectedAnswerNumber}</div>
-//                   </div>`;
 
 
 
 
+  window.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll(`.quizChoice`);
+    const answer_area = document.getElementById(`answerWrapper`);
 
-// quiz.forEach(question => {
-  const buttons = document.querySelectorAll(`.quizChoice`);
-  const answer_area = document.getElementById(`answerWrapper`);
-  // const question_number = document.getElementById(`question_number_js`);
-  
-  buttons.forEach(button =>{
-
-    button.addEventListener(`click`, () => {
-      button.classList.add(`is-selected`);
+      buttons.forEach(button =>{
+        button.addEventListener(`click`, (event) => {
+          const targetId = event.target.id
+          const quizNumber = Number(targetId.substring(6,7));
+          const answerArea = document.getElementById(`correctArea${quizNumber}`);
+          const WrongAnswerArea = document.getElementById(`wrongArea${quizNumber}`);
+          const choices = document.querySelectorAll(`.quizChoice${quizNumber}`);
+          const setDisabled = choices => {
+            choices.forEach(choice => {
+            choice.disabled = true;})
+          }
+          setDisabled(choices);
+          
+          
+          button.classList.add(`is-selected`);
+          
+          if (button.innerText === quiz[quizNumber].correctAnswer){
+            answerArea.classList.add(`correctZone`);
+          }else{
+            WrongAnswerArea.classList.add(`wrongZone`);
+          }
+          
+        });
+      });
       
-      // setDisabled(answers);
-      // const correctAnswer = ALL_QUIZ[question_number].correctNumber
-      //   if ( correctAnswer === selectedAnswerNumber){
-      //     main.insertAdjacentHTML(beforeend,correct_html)
-      //   }else{
-      //     main.insertAdjacentHTML(beforeend,wrong_html)
-      //   };
-    })
-    // forEach(answer);
   })
-
+  
+  function shuffle(arr) {
+    for ( let i = 0; i < arr.length ; i++) {
+      const str1 = quiz[i].option1;
+      const str2 = quiz[i].option2;
+      const str3 = quiz[i].option3;
+      const optionArray =[str1, str2, str3]; 
+      const k = arr.number;
+      const j = Math.floor(Math.random() * k);
+      [optionArray[j], optionArray[k]] = [optionArray[k], optionArray[j]]; 
+      console.log(optionArray)
+    }
+    return arr;
+  };
+  shuffle(quiz)
+  
+  
+//   function optionShuffle(i){
+//     const str1 = quiz[i].option1;
+//   const str2 = quiz[i].option2;
+//   const str3 = quiz[i].option3;
+//   const optionArray =[l, m, n];
+//   let deflength = optionArray.length;
+//   for(let i = 0; i < deflength; i++) {
+//   console.log(optionArray);
+//   const j = Math.floor(Math.random()*(i+1));
+//   [optionArray[j], optionArray[i]] = [optionArray[i], optionArray[j]];
+// }
+//   }
 
   
-//   if (event.target===quiz.answer){
-//   return correct_html;
-// }else{
-//   return wrong_html;
-// }
 
-
-// })
-for(let i = 0; i < quiz.length; i++) { 
+for(let i = 0; i < quiz.length; i++) {
+  const j = Math.floor(Math.random()*(i +1));
+  [quiz[j], quiz[i]] = [quiz[i], quiz[j]];
+}
+  // var str1 = quiz[0];    //配列colの最初の要素
+  // var str2 = quiz[rnd];
+  // quiz[rnd] = str1;
+  // quiz[0]   = str2;
+  // let random = Math.random(i );
+  // const shuffled = shuffle(quiz[i]);
+  for(let i = 0; i < quiz.length; i++) {
   create_quiz(i);
+  
   }
-// forEach(quiz);
-// function option_btn(i){
-//   correct_choice= quiz[i].answer;
-//   btn.onclick = function() {
-    
-    
-//     btn.forEach(()=>{
-//         i.addEventLister('click', () =>{
-//           const clicked_choice =i.correct_html;
+
+
+  // function shuffle(arr) {
+  //   for (let i = arr.length - 1; i > 0; i--) { 
+  //     const j = Math.floor(Math.random() * (i + 1));
+  //     [arr[j], arr[i]] = [arr[i], arr[j]]; 
+  //   }
+  //   return arr;
+  // };
   
-//             if (btn_clicked === correct ){
-//               return correct_html;
-//               // correct.classList.add('js-on');
-//               }
-//         })
-//       })
-//   };
-  
-// }
-// function 
-// quiz.foreach((quiz)=> console.log(quiz[3]));
+  // shuffle(quiz)
+  // const shuffledChoices = shuffle(quiz[i].c);
 
-
-
-
-
-// create_quiz(1);
-
-
-
-
-
-
-// function create(question_id,question,option_array,answer_id,refer_id){
-//   const main = document.getElementById("main");
-//   let quiz = `<div class="quizWrapper">`
-//                 +`<div class="quizContents">`
-//                 +`<h2 class="quizNumber">Q${question_id}</h2>`
-//                 +`<h4 class="quizDescription">${question}</h4>`
-//                 +`</div>`
-//                 +`<div class ="quizPeople">`
-//                 +`<img src='/img/quiz/${question_id}.png' class="quizOneImg">`
-//                 +`</div>`
-//                 +`<div class="quizAnswer">A</div>`
-//                 +`<ul class="quizAnswerWrapper">`
-                
-//                 ;
-                
-  
-  
-  
-
-
-
-
-// function select(question_id,option_id,answer_id){
-//   const choice = document.querySelector(`.list_${question_id}_${option_id}`)
-//   console.log(choice)
-//     if( option_id ===answer_id){
-//         choice.style.backgroundColor = "red"
-        
-//     }else{
-        
-//         choice.style.backgroundColor = "blue"
-//     }
-//     // {once: true}
-    
-// }
-// // main.insertAdjacentHTML("beforeend",choice);
-
-
-
-
-// create_quiz(0);
-
-// btn.forEach((e) => {
-//   e.addEventListener('click', () => {
-//     const clickedAnswer = e.innerHTML;
-
-//     if(btnClicked !== true) {
-//       e.classList.add('js-selected');
-//       if(clickedAnswer === quizAnswer) {
-//         correct.classList.add('js-on');
-//       }
-//       else {
-//         wrong.classList.add('js-on');
-//       };
-//     };
-
-//     btnClicked = true;
-//   });
-// });
-// ;
+  //                   shuffledChoices.forEach(choice => { 
+  //                     const li = document.createElement('li');
+  //                     li.textContent = choice;
+  //                     choices.appendChild(li);
+  //                   });

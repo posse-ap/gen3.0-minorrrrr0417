@@ -274,3 +274,31 @@ border-radius: 48px;
   letter-spacing: 0.1em;
   padding: 32px;
 }
+
+@media (max-width: 480px){ 
+  img html{
+    width: 100% ;
+    }
+    main{
+      display: block;
+    }
+
+    .heroSection{
+      flex-direction: column-reverse;
+      position:relative;
+    }
+    .heroInner{
+      align-self: center;
+      background-color: #eff2f5;
+      border-radius: 20px;
+      display: inline-block;
+      padding: 20px 11px 20px 24px;
+      position: relative;
+      white-space: nowrap;
+  }
+      /* position :absolute;
+      margin: 0 auto;
+      margin-top: -25px; */
+    }
+
+
