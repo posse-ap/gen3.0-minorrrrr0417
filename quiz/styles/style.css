@@ -6,8 +6,19 @@ li{
 
 @media (max-width: 480px){ 
   img {
-    width: 100% ;
+    max-width: 100% ;
     }
+    .heroPicture{
+      width: 100%;
+    }
+  .quizWrapper{
+    max-width: 100%;
+  }
+  .heroTextWrapper{
+  
+
+  }
+
 }
 
 header{
@@ -358,3 +369,4 @@ border-radius: 48px;
   letter-spacing: 0.1em;
   padding: 32px;
 } 
+

@@ -174,20 +174,7 @@ function quote_area(i){
       
   })
   
-  function shuffle(arr) {
-    for ( let i = 0; i < arr.length ; i++) {
-      const str1 = quiz[i].option1;
-      const str2 = quiz[i].option2;
-      const str3 = quiz[i].option3;
-      const optionArray =[str1, str2, str3]; 
-      const k = arr.number;
-      const j = Math.floor(Math.random() * k);
-      [optionArray[j], optionArray[k]] = [optionArray[k], optionArray[j]]; 
-      console.log(optionArray)
-    }
-    return arr;
-  };
-  shuffle(quiz)
+  
   
   
 //   function optionShuffle(i){
@@ -202,6 +189,20 @@ function quote_area(i){
 //   [optionArray[j], optionArray[i]] = [optionArray[i], optionArray[j]];
 // }
 //   }
+function shuffle(arr) {
+  for ( let i = 0; i < arr.length ; i++) {
+    const str1 = quiz[i].option1;
+    const str2 = quiz[i].option2;
+    const str3 = quiz[i].option3;
+    const optionArray =[str1, str2, str3]; 
+    const k = optionArray.length -1;
+    const j = Math.floor(Math.random() * k);
+    [optionArray[j], optionArray[k]] = [optionArray[k], optionArray[j]]; 
+    console.log(optionArray)
+  }
+  return arr;
+};
+shuffle(quiz)
 
   
 
