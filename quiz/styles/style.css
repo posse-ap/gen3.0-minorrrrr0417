@@ -369,4 +369,62 @@ border-radius: 48px;
   letter-spacing: 0.1em;
   padding: 32px;
 } 
+@media screen and (max-width:400px){
+  header{
+    display: none;;
+    width:100%;
+  }
+  .quizWrapper{
+    width: 100%;
+    /* display: block; */
+    margin: 12px;
+  }
+  .quizDescription{
+    width: 94%;
+    margin: 0 auto;
+  }
+  .quizChoice{
+    /* margin: 0 auto; */
+    width: 100%;
+  }
+  .quizAnswerWrapper li{
+    margin:12px 0;
+    width: 94%;
+  }
+  .quizOneImg{
+    width:90%;
+    margin: 0;
+  }
+  .quizAnswerWrapper{
+    display: block;
+  }
+  
+  .correctWrapper, .wrongWrapper{
+    width: 324px;
+    margin: 0 auto;
+  }
+  .quizNumber{
+    margin: 40px 0px 0px ;
+  }
+  .quizCiteBox{
+    /* margin:18px; */
+      padding: 12px 0px 12px 12px;
+    width: 90%;
+
+  }
+  .lineLink{
+    left: 16px;
+  }
+  .lineSection{
+    margin-top: 200px;
+  }
+  .quizAnswer{
+    margin: 20px 0px;
+  }
+  
+  /* .quizSection{
+    width: 100%;
+  } */
+}
+
 

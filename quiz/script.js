@@ -60,7 +60,6 @@ let quiz =[
     correctAnswer: "約5倍",
     quote: "Technology Vision 2021"
   },
-  
 ]
 
 
@@ -176,19 +175,7 @@ function quote_area(i){
   
   
   
-  
-//   function optionShuffle(i){
-//     const str1 = quiz[i].option1;
-//   const str2 = quiz[i].option2;
-//   const str3 = quiz[i].option3;
-//   const optionArray =[l, m, n];
-//   let deflength = optionArray.length;
-//   for(let i = 0; i < deflength; i++) {
-//   console.log(optionArray);
-//   const j = Math.floor(Math.random()*(i+1));
-//   [optionArray[j], optionArray[i]] = [optionArray[i], optionArray[j]];
-// }
-//   }
+
 function shuffle(arr) {
   for ( let i = 0; i < arr.length ; i++) {
     const str1 = quiz[i].option1;
@@ -197,8 +184,8 @@ function shuffle(arr) {
     const optionArray =[str1, str2, str3]; 
     const k = optionArray.length -1;
     const j = Math.floor(Math.random() * k);
-    [optionArray[j], optionArray[k]] = [optionArray[k], optionArray[j]]; 
-    console.log(optionArray)
+    [optionArray[j], optionArray[k]] = [optionArray[k], optionArray[j]];
+    // console.log(optionArray)
   }
   return arr;
 };
@@ -210,31 +197,10 @@ for(let i = 0; i < quiz.length; i++) {
   const j = Math.floor(Math.random()*(i +1));
   [quiz[j], quiz[i]] = [quiz[i], quiz[j]];
 }
-  // var str1 = quiz[0];    //配列colの最初の要素
-  // var str2 = quiz[rnd];
-  // quiz[rnd] = str1;
-  // quiz[0]   = str2;
-  // let random = Math.random(i );
-  // const shuffled = shuffle(quiz[i]);
+
   for(let i = 0; i < quiz.length; i++) {
   create_quiz(i);
   
   }
 
 
-  // function shuffle(arr) {
-  //   for (let i = arr.length - 1; i > 0; i--) { 
-  //     const j = Math.floor(Math.random() * (i + 1));
-  //     [arr[j], arr[i]] = [arr[i], arr[j]]; 
-  //   }
-  //   return arr;
-  // };
-  
-  // shuffle(quiz)
-  // const shuffledChoices = shuffle(quiz[i].c);
-
-  //                   shuffledChoices.forEach(choice => { 
-  //                     const li = document.createElement('li');
-  //                     li.textContent = choice;
-  //                     choices.appendChild(li);
-  //                   });

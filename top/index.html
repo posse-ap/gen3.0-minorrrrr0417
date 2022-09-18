@@ -5,7 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/top/styles/reset.css">
-  <link rel="stylesheet" href="/top/styles/style.css">
+  <link rel="stylesheet" href="/top/styles/style.css" media="">
+  <script defer src="/top/script.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+  <script defer src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-2-1/js/5-2-1.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -13,21 +16,26 @@
     <div class="logoArea">
       <img src="/img/logo.svg" alt="posse">
     </div>
-    <nav class="logoList">
-      <ul>
+    <div class="openbtn2 button"  id="modalOpen"><span></span><span></span>
+      <div id="easyModal">
+          <ul class="logoList" id="logoList-js">
+            <li><a href="">POSSEとは</a></li>
+            <li><a href="">クイズ</a></li>
+          </ul>
+      </div>
+    </div>
+      <ul class="logoListPC" >
         <li><a href="">POSSEとは</a></li>
         <li><a href="">クイズ</a></li>
         <li><a href="https://twitter.com/posse_program"><img src="/img/icon/icon-twitter.svg" alt="twitter"></a></li>
         <li><a href="https://www.instagram.com/posse_programming/"><img src="/img/icon/icon-instagram.svg" alt="instagram"></a></li>
       </ul>
-    </nav>
   </header>
+
   <main>
     <section class="heroSection">
       <div class="heroImg">
-        <!-- <div class="heroPicture"> -->
           <img src="/img/img-hero.jpg" alt="">
-        <!-- </div> -->
         <div class="heroInner">
           <h1 class="heroDescription">学生プログラミングコミュニティ POSSE（ポッセ）</h1>
           <span class="heroBest">自分史上最高<br>を仲間と。</span>
@@ -74,9 +82,9 @@
       </div>
     </section>
     <section>
-      <div class="fixedBanner">
-        <div class="lineIcon">
-          <i class="bannerlineLinkIcon"><img src="/img/icon/icon-line.svg" alt=""></i>
+      <div class="fixedBanner" >
+        <div class="lineIcon2">
+        <img src="/img/icon/icon-line.svg" alt="">
         </div>
         <div  class="bannerDescription">
           <p>POSSE公式LINEで<br>最新情報をGET!</p>
