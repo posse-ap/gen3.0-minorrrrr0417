@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/quiz/styles/reset.css">
   <link rel="stylesheet" href="/quiz/styles/style.css">
-  <link rel="stylesheet" href="/quiz/script.js">
+  <script defer src="/quiz/script.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -23,8 +23,9 @@
       </ul>
     </nav>
   </header>
+<main>
+
   
-  <main>
     <section>
     <div class="heroImg">
       <div class="heroTextWrapper">
@@ -33,9 +34,10 @@
       </div>
     </div>
   </section>
+  <section  class="quizSection"id="quizSection"></section>
   
-  <!-- ここからQ1 -->
-  <section>
+
+  <!-- <section>
     <div class="quizWrapper">
       <h2 class="quizContents">
         <span class="quizNumber">Q1</span>
@@ -46,28 +48,29 @@
       </div>
       <span class="quizAnswer">A</span>
       <div class="quizAnswerWrapper">
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         約28万人
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         約79万人
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         約183万人
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
       </div>
+      <div id="quizResult"></div>
       <div class="quizCiteBox">
         <img src="/img/icon/icon-note.svg" alt="">
         <p> 経済産業省 2019年3月 - IT 人材需給に関する調査</p>
       </div>
     </div>
-  </section>
-  <!-- ここまでQ1 -->
+  </section> -->
 
-  <!-- ここからQ2 -->
+
+<!-- 
   <section>
     <div class="quizWrapper">
       <h2 class="quizContents">
@@ -79,26 +82,27 @@
       </div>
       
       <span class="quizAnswer">A</span>
-      <div class="quizAnswerWrapper">
-      <button class="quizChoice">
+      <div class="quizAnswerWrapper" >
+      <button class="quizChoice"  id="quizChoiceJs">
         INTECH
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
-      <button class="quizChoice">
+      <button class="quizChoice"  id="quizChoiceJs">
         BIZZTECH
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
-      <button class="quizChoice">
+      <button class="quizChoice"id="quizChoiceJs">
         X-TECH
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
       </div>
+      <div id="quizResult"></div>
     </div>
-  </section>
-  <!-- ここまでQ2 -->
+  </section> -->
 
-  <!-- ここからQ3 -->
-  <section>
+
+
+  <!-- <section>
     <div class="quizWrapper">
       <h2 class="quizContents">
         <span class="quizNumber">Q3</span>
@@ -111,24 +115,25 @@
     
       <span class="quizAnswer">A</span>
       <div class="quizAnswerWrapper">
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         Internet of Things
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         Integrate into Technology
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         Information on Tool
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
       </div>
+      <div id="quizResult"></div>
     </div>
   </section>
-  <!-- ここまでQ3 -->
 
-  <!-- ここからQ4 -->
+
+  
   <section>
     <div class="quizWrapper">
       <h2 class="quizContents">
@@ -141,15 +146,15 @@
     
       <span class="quizAnswer">A</span>
       <div class="quizAnswerWrapper">
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         Society 5.0
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         CyPhy
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         SDGs
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
@@ -158,11 +163,11 @@
         <img src="/img/icon/icon-note.svg" alt="">
         <p> Society5.0 - 科学技術政策 - 内閣府</p>
       </div>
+      <div id="quizResult"></div>
     </div>
   </section>
-  <!-- ここまでQ4 -->
+  
 
-  <!-- ここからQ5 -->
   <section>
     <div class="quizWrapper">
       <h2 class="quizContents">
@@ -175,24 +180,24 @@
     
       <span class="quizAnswer">A</span>
       <div class="quizAnswerWrapper">
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         Web3.0
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         NFT
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         メタバース
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
       </div>
+      <div id="quizResult"></div>
     </div>
   </section>
-  <!-- ここまでQ5 -->
 
-  <!-- ここからQ6 -->
+
   <section>
     <div class="quizWrapper">
       <h2 class="quizContents">
@@ -205,27 +210,26 @@
     
       <span class="quizAnswer">A</span>
       <div class="quizAnswerWrapper">
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         約2倍
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         約5倍
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
-      <button class="quizChoice">
+      <button class="quizChoice" id="quizChoiceJs">
         約11倍
         <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
       </button>
       </div>
-
+      <div id="quizResult"></div>
       <div class="quizCiteBox">
         <img src="/img/icon/icon-note.svg" alt="">
         <p> Technology Vision 2021</p>
       </div>
     </div>
-  </section>
-  <!-- ここまでQ6 -->
+  </section> --> -->
 
 
   <!-- ここからline -->
@@ -245,7 +249,7 @@
           </div>
           <div class="lineLink">
             <div class="lineAdd">LINE追加</div>
-            <i class="lineLinkIcon"><img src="/icon/icon-link-dark.svg" alt=""></i>
+            <!-- <i class="lineLinkIcon"><img src="/icon/icon-link-dark.svg" alt=""></i> -->
           </div>
       </div>
     </div>

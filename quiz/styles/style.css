@@ -4,6 +4,23 @@ li{
 
 /* ここからheader */
 
+@media (max-width: 480px){ 
+  img {
+    max-width: 100% ;
+    }
+    .heroPicture{
+      width: 100%;
+    }
+  .quizWrapper{
+    max-width: 100%;
+  }
+  .heroTextWrapper{
+  
+
+  }
+
+}
+
 header{
   width: 100%;
   height: 80px;
@@ -100,18 +117,27 @@ header{
   line-height: 1.5;
   margin-top: 24px;
 }
+
+.quizPeople{
+  align-items: center;
+  margin: 0 auto;
+}
+
 .quizOneImg{
-  margin: 64px  0;
+  margin: 64px  ;
     max-width: 718px;
 }
 .quizAnswer{
+  width: 40px;
+  height: 58px;
   background-color: #e34e70;
   border-radius: 8px;
   padding: 8px 16px;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 36px;
-  line-height: 150%;
+  line-height: normal;
+  text-align: center;
 }
 .quizAnswerWrapper{
   display: flex;
@@ -134,7 +160,13 @@ header{
   background: #FFFFFF;
   cursor: pointer;
 }
-.quizChoice:hover{
+
+
+
+
+.is-selected{
+  background-color: #eff2f5;
+  border-color: #0071bc;
 
 }
 .quizCiteBox{
@@ -142,13 +174,72 @@ header{
   justify-content: left;
   gap: 16px;
   background-color: #F6F6F6;
-  margin: 16px 0;
   padding: 24px;
   border-radius: 8px;
   font-weight: 700;
   font-size: 18px;
   line-height: 180%;
+  margin: 16px 0px;
 }
+
+.correctWrapper{
+  display: none;
+}
+.wrongWrapper{
+display: none;
+}
+.correctZone, .wrongZone{
+  width: 984px;
+  height: 143px;
+  border-radius: 8px;
+  display: block;
+  margin: 20px 0px;
+}
+
+.correctZone{
+  background-color:#FFF2F5;
+}
+
+.wrongZone{
+  background-color: #eff2f5;
+}
+
+.correct{
+  color:  #E34E70;
+}
+
+.wrong{
+  color: #0071BC;
+}
+
+.correct, .wrong{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+}
+.correctA, .wrongA{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 180%;
+}
+.correctAnswer, .wrongAnswer {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 180%;
+}
+.answerAreaPosition{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 12px 0px;
+}
+.contentsPosition{
+  padding: 24px 0px 0px 40px ;
+}
+
+
+
 
 
 /* ここからlineSection */
@@ -278,3 +369,62 @@ border-radius: 48px;
   letter-spacing: 0.1em;
   padding: 32px;
 } 
+@media screen and (max-width:400px){
+  header{
+    display: none;;
+    width:100%;
+  }
+  .quizWrapper{
+    width: 100%;
+    /* display: block; */
+    margin: 12px;
+  }
+  .quizDescription{
+    width: 94%;
+    margin: 0 auto;
+  }
+  .quizChoice{
+    /* margin: 0 auto; */
+    width: 100%;
+  }
+  .quizAnswerWrapper li{
+    margin:12px 0;
+    width: 94%;
+  }
+  .quizOneImg{
+    width:90%;
+    margin: 0;
+  }
+  .quizAnswerWrapper{
+    display: block;
+  }
+  
+  .correctWrapper, .wrongWrapper{
+    width: 324px;
+    margin: 0 auto;
+  }
+  .quizNumber{
+    margin: 40px 0px 0px ;
+  }
+  .quizCiteBox{
+    /* margin:18px; */
+      padding: 12px 0px 12px 12px;
+    width: 90%;
+
+  }
+  .lineLink{
+    left: 16px;
+  }
+  .lineSection{
+    margin-top: 200px;
+  }
+  .quizAnswer{
+    margin: 20px 0px;
+  }
+  
+  /* .quizSection{
+    width: 100%;
+  } */
+}
+
+
