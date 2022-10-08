@@ -1,0 +1,591 @@
+li{ 
+  list-style: none;
+}
+
+/* ここからheader */
+
+@media (max-width: 480px){ 
+  img {
+    max-width: 100% ;
+    }
+    .heroPicture{
+      width: 100%;
+    }
+  .quizWrapper{
+    max-width: 100%;
+  }
+
+
+}
+
+header{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 24px;
+  position: fixed;
+  background-color: #FFFFFF;
+  z-index: 100;
+  }
+.logoArea{
+  margin-top: 26px;
+  margin-right: 24px;
+}
+.logoListPC{
+  margin-top: 30px;
+  /* margin-left: 30px; */
+}
+
+.logoListPC{
+  display: flex;
+  justify-content: right;
+}
+.logoListPC li{
+  margin-right: 32px;
+  color: #666666;
+}
+.logoListPC li:last-child(3),
+.logoListPC li:last-child(4){
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+  margin-top: -5px;
+}
+.logoList{
+  display: none;
+}
+/* ここまでheader */
+
+/* ここからheroSection */
+.heroImg{
+  position: relative;
+  background: url(/img/quiz/bg-hero.jpg); 
+  /* background-repeat:no-repeat; */
+  background-size: cover;
+  height: 320px;
+  top: 110px;
+}
+
+
+.heroTextWrapper{
+  position: absolute;
+  padding: 110px 0 76px 0;
+  color: #FFFFFF;
+  left: 204px;
+}
+.heroText{
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 1.8;
+
+}
+
+.heroTitle{
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+
+/* ここまでheroSection */
+.quizWrapper{
+  margin: 200px 144px;
+}
+.quizContents{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.quizNumber{
+  background-color: #0071bc;
+  border-radius: 8px;
+  color: #FFFFFF;
+  padding: 16px;
+  width: 53px;
+  height: 54px;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 8px 16px;
+}
+.quizDescription{
+  width: 100%;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 24px;
+}
+.quizPeople{
+  margin: 40px 0px;
+  text-align: center;
+}
+
+.quizPeople Img{
+  max-width: 718px;
+  width: 100%;
+  height: auto;
+}
+
+
+.quizAnswer{
+  width: 40px;
+  height: 58px;
+  background-color: #e34e70;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: normal;
+  text-align: center;
+}
+.quizAnswerWrapper{
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 16px 0 0 ;
+}
+.quizChoice{
+  display: flex;
+  justify-content: space-between;
+  border: solid 5px #eee;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.8;
+  text-align: left;
+  align-items: center;
+  padding: 24px;
+  width: 312px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+
+
+
+.is-selected{
+  background-color: #eff2f5;
+  border-color: #0071bc;
+
+}
+.quizCiteBox{
+  display: flex;
+  justify-content: left;
+  /* gap: 16px; */
+  background-color: #F6F6F6;
+  padding: 24px 0px 24px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 180%;
+  margin: 16px 0px;
+  width: 100%;
+}
+.referenceArea{
+  margin-left: 16px;
+}
+
+.correctWrapper{
+  display: none;
+}
+.wrongWrapper{
+display: none;
+}
+.correctZone, .wrongZone{
+  width: 984px;
+  height: 143px;
+  border-radius: 8px;
+  display: block;
+  margin: 20px 0px;
+}
+
+.correctZone{
+  background-color:#FFF2F5;
+}
+
+.wrongZone{
+  background-color: #eff2f5;
+}
+
+.correct{
+  color:  #E34E70;
+}
+
+.wrong{
+  color: #0071BC;
+}
+
+.correct, .wrong{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+}
+.correctA, .wrongA{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 180%;
+}
+.correctAnswer, .wrongAnswer {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 180%;
+}
+.answerAreaPosition{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 12px 0px;
+}
+.contentsPosition{
+  padding: 24px 0px 0px 40px ;
+}
+
+
+
+
+
+/* ここからlineSection */
+
+.lineSection{
+  max-width: 984px;
+  width: 100%;
+  height: 357px;
+  margin: 0 auto;
+  position: relative;
+}
+.lineInner{
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/bg-line.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 48px;
+}
+.lineInner:before{
+content:"";
+display: block;
+width: 100%;
+height: 100%;
+position: absolute;
+background-color:  #0071bc; 
+opacity: 0.9;
+border-radius: 48px;
+
+}
+.lineContents{
+  width: 100%;
+  text-align: center;
+}
+
+.lineTitles{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 40px 0 0 0;
+}
+.lineIcon{
+  width: 40px;
+  height: 40px;
+  background:radial-gradient(#FFFFFF 60%, rgba(248, 249, 249, 0) 40%);
+}
+.posseOfficialLine{
+  max-width: fit-content;
+  width: 100%;
+  font-weight: 700;
+  font-size: 33px;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+}
+.lineDescription{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 120px; 
+  color: #FFFFFF;
+  line-height: 15px ;
+  font-size : 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.lineLink{
+  position: absolute;
+  top: 240px;
+  background-color: #FFFFFF;
+  padding: 22px ;
+  border-radius: 98px;
+  height: auto;
+  max-width: 320px;
+  width: 100%;
+  line-height: 8px;
+  color: #666666;
+  left: 320px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ここからfooter */
+.footerWrapper{
+  padding: 56px 24px 48px;
+  text-align: center;
+  border-style: solid;
+  border-color: #EEEEEE;
+  border-left: transparent;
+  border-right: transparent;
+}
+.twitterIcon,.instagramIcon{
+  display: inline-flex;
+  border-style: solid;
+  border-color: #EEEEEE;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+/* ここからfooter */
+
+.footerSite{
+  color: #666666;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 180%;
+  margin: 24px 0px 0px;
+}
+.footerBottom{
+  text-align: center;
+  color: #666666;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  padding: 32px;
+} 
+@media screen and (max-width:768px){
+  header{
+    width: 100%;
+    padding: 0px;
+  }
+  .logoList{
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    margin-top: 0;
+    z-index: 1;
+  }
+  .logoList li {
+    margin-top: 60px;
+    font-weight: 200px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+
+
+
+  
+  .logoListPC{
+    display: none;
+  }
+
+  .openbtn2{
+    position: relative;/*ボタン内側の基点となるためrelativeを指定  */
+    width: 20px;
+    height:50px;
+    cursor: pointer;
+    background:#fff;
+  } 
+    
+  /*ボタン内側*/
+  
+  .openbtn2 span{
+      display: inline-block; 
+      transition: all .4s;/*アニメーションの設定*/
+      position: absolute;
+      right: 12px;
+      height: 2px;
+      z-index: 3;
+      background-color: #666;
+    }
+  
+  
+  .openbtn2 span:nth-of-type(1) {
+    top:24px; 
+      width: 52px;
+  }
+  
+  .openbtn2 span:nth-of-type(2) {
+    top:39px;
+      width:52px;
+  }
+  
+  /*activeクラスが付与されると線が回転して×に*/
+  
+  .openbtn2.active span:nth-of-type(1) {
+      top: 24px;
+      right :0px;
+      transform: translateY(6px) rotate(-45deg);
+  }
+  
+  .openbtn2.active span:nth-of-type(2) {
+      top: 39px;
+      right:0;
+      transform: translateY(-6px) rotate(45deg);
+  }
+
+  
+
+  
+  a{
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .lead{
+    margin:20px 0 0 0;
+  }
+  
+  .btn-block{
+    width:200px;  
+    padding: 30px;
+  }
+
+  .heroSection{
+    display: block;
+    margin-top: 100px;
+  }
+  
+  .heroImg img{
+    /* margin-left: -18px; */
+    border-radius: 0;
+    /* object-fit: fill; */
+  }
+  
+  .heroInner{
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    margin: -40px auto 0;
+  }
+.heroBest{
+  font-size: 40px;
+  line-height: 150%;
+  font-weight: 700;
+  /* margin-left: 12px; */
+}
+.heroBest br{
+  display: none;
+}
+.heroDescription{
+  font-size: 12px;
+  line-height: 21.6px;
+  margin-bottom: 40px;
+  /* margin:12px; */
+}
+  .heroTextWrapper{
+    left:100px;
+  }
+  .quizSection{
+    margin-top: 180px;
+  }
+  .quizWrapper{
+    width: 94%;
+    margin: 60px 12px;
+  }
+  .quizDescription{
+    width: 100%;
+  }
+  .quizChoice{
+    width: 100%;
+  }
+  .quizAnswerWrapper li{
+    margin:12px 0;
+    /* width: 94%; */
+  }
+
+  .quizAnswerWrapper{
+    display: block;
+  }
+  
+  .correctWrapper, .wrongWrapper{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .quizCiteBox{
+    width: 97%;
+    margin: 0px;
+  }
+
+  .lineSection{
+    margin-top: 200px;
+  } */
+  .quizAnswer{
+    margin: 20px 0px;
+  }
+
+.lineSection{
+  margin-top:200px;
+  width: 80%;
+}
+  .lineTitles{
+    display: block;
+  }
+    .lineContents{
+    gap:0px
+  }
+
+  .lineIcon{
+    margin: 0 auto 20px;
+  }
+
+
+  .posseOfficialLine{
+    margin: 20px auto;
+  }
+  .lineDescription{
+    margin-top: 12px;
+  }
+  .lineLink{
+    width: 60%;
+    left:40px;
+    top: 280px;
+
+  }
+}
+
+/* @media screen and (max-width: 375px){
+.lineLink{
+  left:40px;
+}
+
+.heroTextWrapper{
+  left:40px;
+} */
+/* } */
+@media screen and (max-width:375px){
+  .heroTextWrapper{
+    left:40px;
+  }
+}
+
+
+
