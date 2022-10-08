@@ -299,8 +299,8 @@ border-radius: 48px;
 @media screen and (max-width: 768px){     
     header{
       position: relative;
-      margin: -18px;
       padding: 0;
+
     }
     body{
       padding: 0;
@@ -312,13 +312,16 @@ border-radius: 48px;
       position: fixed;
       flex-direction: column;
       align-items: center;
-      top:0;
+      top: 0;
       left:0;
       width: 100vw;
       height: 100vh;
       background-color: #fff;
       margin-top: 0;
       z-index: 1;
+    }
+    .logoList li {
+      margin-top: 60px;
     }
 
     .flex {
@@ -347,7 +350,7 @@ border-radius: 48px;
         display: inline-block;
         transition: all .4s;/*アニメーションの設定*/
         position: absolute;
-        right:0px;
+        right:40px;
         height: 2px;
         z-index: 3;
       background-color: #666;
@@ -355,32 +358,29 @@ border-radius: 48px;
     
     
     .openbtn2 span:nth-of-type(1) {
-      top:55px; 
+      top: 25px; 
         width: 52px;
     }
     
     .openbtn2 span:nth-of-type(2) {
-      top:70px;
+      top:40px;
         width:52px;
     }
     
     /*activeクラスが付与されると線が回転して×に*/
     
     .openbtn2.active span:nth-of-type(1) {
-        top: 70px;
-        right:0;
+        top: 40px;
+        right: 40px;
         transform: translateY(6px) rotate(-45deg);
-        /* width: 20%; */
     }
     
     .openbtn2.active span:nth-of-type(2) {
-        top: 82px;
-        right:0;
+        top: 52px;
+        right:40px;
         transform: translateY(-6px) rotate(45deg);
-        /* width: 20%; */
     }
     .button {
-      /* background: lightblue; */
       color: #fff;
       padding: 0 2em;
       border: 0;
@@ -389,76 +389,14 @@ border-radius: 48px;
       font-size: 45px;
       border-radius: 5px;
       font-weight: 900;
-      /* position: relative;
-      left: 400px;
-      top: 260px; */
       font-family: serif;
     }
     
     .button:hover {
-      /* background: lightcoral; */
       cursor: pointer;
     }
     
-    /* .modal {
-      display: none; */
-      /* position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.5); */
-    /* } */
-    
-    /* .modal-content {
-      background-color: #f4f4f4;
-      margin: 20% auto;
-      width: 50%;
-      box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
-      animation-name: modalopen;
-      animation-duration: 1s;
-    }  */
 
-    
-    /* @keyframes modalopen {
-      from {opacity: 0}
-      to {opacity: 1}
-    } 
-    
-    .modal-header h1 {
-      margin: 1rem 0;
-    }
-    
-    .modal-header {
-      background: lightblue;
-      padding: 3px 15px;
-      display: flex;
-      justify-content: space-between;
-    } 
-    
-    .modalClose {
-      display: none;
-      font-size: 2rem;
-    }
-    .modalDisplay{
-      display: block;
-    }
-    
-    .modalClose:hover {
-      cursor: pointer;
-    }  */
-    
-    /* .modal-body {
-      padding: 10px 20px;
-      color: black;
-    } */
- 
-    /* body{
-        padding:20px;
-    } */
-    
     
     a{
       color: #333;
@@ -550,7 +488,6 @@ border-radius: 48px;
     .lineContents{
     gap:0px
   }
- 
   .lineIcon{
     margin: 0 auto 20px;
   }
@@ -560,7 +497,8 @@ border-radius: 48px;
     margin: 20px auto;
   }
   .lineLink{
-    width: 295px;
+    max-width: 295px;
+    width: 100%;
     height: 30px;
     left:8px;
     top:260px;
@@ -572,6 +510,7 @@ border-radius: 48px;
     top: 2200px;
     width: 100vw;
     margin: 0 auto;
+    z-index: 3;
     }
   .fixedBanner{
     display: flex;
@@ -580,18 +519,17 @@ border-radius: 48px;
     border-radius: 0;
     bottom: 0;
     left: 0;
-    z-index: 3;
+    z-index: 5;
   }
   .bannerDescription br{
     display: none;
   }
 
 
-
 }
 @media screen and (max-width: 375px){
 .heroInner{
-  padding: 20px 0px;
+  padding: 0px;
   width: 90%;
 }
 .heroDescription{
@@ -607,12 +545,13 @@ border-radius: 48px;
   /* padding: 12px; */
 }
 .lineLink{
-  width: 80%;
+  width: 40%;
 }
 .footerWrapper{
   top:1800px;
   padding: 0;
 }
+
 }
 
 
