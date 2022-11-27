@@ -1,0 +1,131 @@
+main{
+  background-color:#f2f2f2;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20px;
+}
+
+.header_area{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0px 40px;
+}
+.header_left{
+  display: flex;
+  gap: 20px;
+}
+.header_button{
+  /* width: 200px; */
+  background-image: linear-gradient(90deg, rgb(5, 111, 206), rgb(11, 204, 240));
+  /* background-color: #0040ff; */
+  color: #ffffff;
+  border-radius: 40px;
+  line-height: 40px;
+  padding: 0px 40px;
+}
+.header_text{
+  color:#A9d0f5;
+  margin: auto;
+}
+
+.contents_wrapper{
+  display: flex;
+  gap:20px;
+  justify-content: center;
+}
+
+.right_area,.left_area{
+  width: 600px;
+}
+main{
+  background-color:#f2f2f2;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20px;
+}
+
+/* 左サイド */
+
+.top_data_wrapper{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap:20px;
+  text-align: right;
+}
+.top_data_box{
+background-color: #ffffff;
+width: 100%;
+border-radius: 14px;
+}
+.top_data_inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:16px;
+  padding: 30px;
+}
+.data_name{
+  font-size: 20px;
+  font-weight: 600;
+  color:#0040ff ;
+}
+.data_number{
+  font-size: 40px;
+  font-weight: 900;
+}
+.data_unit{
+  font-size: 24px;
+  font-weight: 400;
+  color:#A9d0f5;
+}
+.under_area{
+  background-color: #ffffff;
+  margin-top: 20px;
+
+  /* width: 100%; */
+  height: 100%;
+}
+
+
+/* 右サイド */
+
+.circle_box_wrapper{
+  display: flex;
+  gap: 20px;
+}
+.circle_box{
+  background-color: #ffffff;
+  width: 100%;
+  height: 600px;
+  border-radius: 14px;
+}
+.circle_box_text{
+  font-size: 20px;
+  font-weight: 600;
+  margin: 40px 0px;
+}
+
+
+/* footer */
+
+.footer_wrapper{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap:12px;
+  margin-top: 20px;
+}
+.footer_left{
+  color: #0040ff;
+  font-size: large;
+}
+.footer_text{
+  font-weight: 200;
+}
+.footer_right{
+  color: #A9d0f5;
+  font-size: large;
+}

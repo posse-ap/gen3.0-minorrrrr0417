@@ -1,0 +1,6 @@
+.header_area{
+  display: flex;
+  
+  height: 64px;
+  margin: 20px;
+}

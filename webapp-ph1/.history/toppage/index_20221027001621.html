@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/toppage/reset.css">
+  <link rel="stylesheet" href="/toppage/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" /></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  <script src="/toppage/script.js" defer></script>
+  <title>Document</title>
+</head>
+<body>
+  <header class="header_area">
+    <div class="header_left">
+      <div class="header_logo"><img src="/toppage/img/logo.svg" alt="POSSE"></div>
+      <p class="header_text">4th week</p>
+    </div>
+      <a href="#modal-01" class="modal-button">
+        記録・投稿
+      </a>
+      <div class="modal-wrapper" id="modal-01">
+        <a href="#!" class="modal-overlay"></a>
+        <div class="modal-window">
+            <div class="modal_top_wrapper">
+              <div class="modal_top_content">
+                <!-- <div class="modal_top_content_wrapper"> -->
+                  <p class="modal_content_title">学習日</p>
+                  
+                  <div class="calendar-modal-warapper">
+                      <div class="modal_content_box_wrapper">
+                        <input class="modal_calendar modal_content_box"type="text" id="datepicker">
+                      </div>
+                  </div>
+                <!-- </div> -->
+              </div>
+              <div class="modal_top_content">
+                <!-- <div class="modal_top_content_wrapper"> -->
+                  <p class="modal_content_title">学習時間</p>
+                  <div class="modal_content_box_wrapper">
+                  <input class="modal_content_box"></input>
+                </div>
+                <!-- </div> -->
+              </div>
+            </div>
+            <div class="modal_under_wrapper">
+              <div class="modal_content">
+
+                <p class="modal_content_title">学習コンテンツ（複数選択可）</p>
+                  <div class="modal_content_box_check_wrapper">
+                    <label class="ECM_CheckboxInput">
+                      <input class="ECM_CheckboxInput-Input" type="checkbox">
+                      <span class="ECM_CheckboxInput-DummyInput"></span>
+                      <p class="modal_content_box_check">N予備校</p>
+                    </label>
+                    <label class="ECM_CheckboxInput">
+                      <input class="ECM_CheckboxInput-Input" type="checkbox">
+                      <span class="ECM_CheckboxInput-DummyInput"></span>
+                      <p class="modal_content_box_check">ドットインストール</p>
+                    </label>
+                    <label class="ECM_CheckboxInput">
+                      <input class="ECM_CheckboxInput-Input" type="checkbox">
+                      <span class="ECM_CheckboxInput-DummyInput"></span>
+                      <p class="modal_content_box_check">POSSE課題</p>
+                    </label>
+                  </div>
+                <p class="modal_content_title">学習環境（複数選択可）</p>
+                  <div class="modal_content_box_check_wrapper">
+                    <label class="ECM_CheckboxInput">
+                      <input class="ECM_CheckboxInput-Input" type="checkbox">
+                      <span class="ECM_CheckboxInput-DummyInput"></span>
+                      <p class="modal_content_box_check">HTML</p>
+                    </label>
+                    <label class="ECM_CheckboxInput">
+                      <input class="ECM_CheckboxInput-Input" type="checkbox">
+                      <span class="ECM_CheckboxInput-DummyInput"></span>
+                      <p class="modal_content_box_check">CSS</p>
+                    </label>
+                    <label class="ECM_CheckboxInput">
+                      <input class="ECM_CheckboxInput-Input" type="checkbox">
+                      <span class="ECM_CheckboxInput-DummyInput"></span>
+                      <p class="modal_content_box_check">JavaScript</p>
+                    </label>
+                    <label class="ECM_CheckboxInput">
+                      <input class="ECM_CheckboxInput-Input" type="checkbox">
+                      <span class="ECM_CheckboxInput-DummyInput"></span>
+                      <p class="modal_content_box_check">PHP</p>
+                    </label>
+                    <label class="ECM_CheckboxInput">
+                      <input class="ECM_CheckboxInput-Input" type="checkbox">
+                      <span class="ECM_CheckboxInput-DummyInput"></span>
+                      <p class="modal_content_box_check">Laravel</p>
+                    </label>
+                    <label class="ECM_CheckboxInput">
+                      <input class="ECM_CheckboxInput-Input" type="checkbox">
+                      <span class="ECM_CheckboxInput-DummyInput"></span>
+                      <p class="modal_content_box_check">SQL</p>
+                    </label>
+                    <label class="ECM_CheckboxInput">
+                      <input class="ECM_CheckboxInput-Input" type="checkbox">
+                      <span class="ECM_CheckboxInput-DummyInput"></span>
+                      <p class="modal_content_box_check">SHELL</p>
+                    </label>
+                    <label class="ECM_CheckboxInput">
+                      <input class="ECM_CheckboxInput-Input" type="checkbox">
+                      <span class="ECM_CheckboxInput-DummyInput"></span>
+                      <p class="modal_content_box_check">情報システム基礎知識（その他）</p>
+                    </label>
+                </div>
+              </div>
+              <div class="modal_content">
+                <p class="modal_content_title">Twitter用コメント</p>
+                <p class="modal_content_box_twitter"></p>
+                <label class="ECM_CheckboxInput">
+                  <input class="ECM_CheckboxInput-Input" type="checkbox">
+                  <span class="ECM_CheckboxInput-DummyInput"></span>
+                  <p class="modal_content_box_check"id>Twitterにシェアする</p>
+                </label>
+                <!-- <div class="modal_content_twitter_check">Twitterにシェアする</div> -->
+              </div>
+              
+            </div>
+            
+
+          <!-- <a href="#!" class="modal-close"><i class="far fa-times-circle"></i></a> -->
+          <a href="#!" class="modal-close">×</a>
+          <button class="modal-button modal_under_button " id="record">
+            記録・投稿
+          </button>
+        </div>
+      </div>
+    
+  </header>
+  <main>
+    <div class="contents_wrapper">
+      <div class="left_area">
+        <ul class="top_data_wrapper">
+            <li class="top_data_box">
+              <div class="top_data_inner">
+                <div class="data_name">Today</div>
+                <div class="data_number">3</div>
+                <div class="data_unit">hour</div>
+              </div>
+            </li>
+            <li class="top_data_box">
+              <div class="top_data_inner">
+                <div class="data_name">Month</div>
+                <div class="data_number">120</div>
+                <div class="data_unit">hour</div>
+              </div>
+            </li>
+            <li class="top_data_box">
+              <div class="top_data_inner">
+                <div class="data_name">Total</div>
+                <div class="data_number">1348</div>
+                <div class="data_unit">hour</div>
+              </div>
+            </li>
+        </ul>
+        <div class="under_area">
+          <canvas id="barChart" width="600" height="410"></canvas>
+        </div>
+      </div>
+      
+      <div class="right_area">
+        <div class="circle_box_wrapper">
+          <div class="circle_box">
+            <p class="circle_box_text">学習言語</p>
+            <canvas id="LanguageChart" width="100" height="410"></canvas>
+          </div>
+          <div class="circle_box">
+            <p class="circle_box_text">学習コンテンツ</p>
+            <canvas id="ContentsChart" width="100" height="210"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer_wrapper">
+      <p class="footer_left">＜</p>
+      <p class="footer_text">2020年10月</p>
+      <p class="footer_right">＞</p>
+    </footer>
+  </main>
+  
+</body>
+</html>

@@ -1,0 +1,89 @@
+.header_area{
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0px 40px;
+}
+.header_left{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header_button{
+  width: 80px;
+  height: 40px;
+  background-color: #0040ff;
+}
+.header_text{
+  color:#A9d0f5;
+}
+main{
+  background-color:#f2f2f2;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20px;
+}
+.contents_wrapper{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+}
+
+.right_area,.left_area{
+  width: 700px;
+}
+
+/* 左サイド */
+
+.top_data_wrapper{
+  list-style: none;
+  display: flex;
+  gap:20px;
+  text-align: right;
+}
+.top_data_box{
+background-color: #ffffff;
+width: 100%;
+border-radius: 14px;
+}
+.top_data_inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:16px;
+  padding: 30px;
+}
+.data_name{
+  font-size: 20px;
+  font-weight: 600;
+  color:#0040ff ;
+}
+.data_number{
+  font-size: 40px;
+  font-weight: 900;
+}
+.data_unit{
+  font-size: 24px;
+  font-weight: 400;
+  color:#A9d0f5;
+}
+
+
+
+/* 右サイド */
+
+.circle_box_wrapper{
+  display: flex;
+  gap: 20px;
+}
+.circle_box{
+  background-color: #ffffff;
+  width: 360px;
+  height: 600px;
+  border-radius: 14px;
+}
+.circle_box_text{
+  font-size: 20px;
+  font-weight: 600;
+  margin: 40px 20px;
+}

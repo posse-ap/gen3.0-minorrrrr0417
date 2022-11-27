@@ -1,0 +1,19 @@
+.header_area{
+  display: flex;
+  width: 100vw;
+  height: 64px;
+  margin: 20px;
+}
+.contents_wrapper{
+  background-color:#;
+  height: 100vh;
+}
+.top_data_wrapper{
+  list-style: none;
+  display: flex;
+  gap:40px;
+  /* flex-direction: space-between; */
+}
+.top_data_box{
+background-color: #ffffff;
+}
