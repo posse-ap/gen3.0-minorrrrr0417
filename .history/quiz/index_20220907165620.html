@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/quiz/styles/reset.css">
+  <link rel="stylesheet" href="/quiz/styles/style.css">
+  <script defer src="/quiz/script.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="logoArea">
+      <img src="/img/logo.svg" alt="posse" >
+    </div>
+    <nav class="logoList">
+      <ul>
+        <li><a href="">POSSEとは</a></li>
+        <li><a href="">クイズ</a></li>
+        <li><a href=""><img src="/img/icon/icon-twitter.svg" alt="twitter"></a></li>
+        <li><a href=""><img src="/img/icon/icon-instagram.svg" alt="instagram"></a></li>
+      </ul>
+    </nav>
+  </header>
+<main>
+
+  
+    <section>
+    <div class="heroImg">
+      <div class="heroTextWrapper">
+        <p class="heroText">POSSE課題</p>
+        <span class="heroTitle">ITクイズ</span>
+      </div>
+    </div>
+  </section>
+  <section  class=""id="quizSection"></section>
+  
+
+  <!-- <section>
+    <div class="quizWrapper">
+      <h2 class="quizContents">
+        <span class="quizNumber">Q1</span>
+        <span class="quizDescription">日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？</span>
+      </h2>
+      <div class="quizPeople">
+        <img src="/img/quiz/img-quiz01.png" alt="" class="quizOneImg">
+      </div>
+      <span class="quizAnswer">A</span>
+      <div class="quizAnswerWrapper">
+      <button class="quizChoice" id="quizChoiceJs">
+        約28万人
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      <button class="quizChoice" id="quizChoiceJs">
+        約79万人
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      <button class="quizChoice" id="quizChoiceJs">
+        約183万人
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      </div>
+      <div id="quizResult"></div>
+      <div class="quizCiteBox">
+        <img src="/img/icon/icon-note.svg" alt="">
+        <p> 経済産業省 2019年3月 - IT 人材需給に関する調査</p>
+      </div>
+    </div>
+  </section> -->
+
+
+<!-- 
+  <section>
+    <div class="quizWrapper">
+      <h2 class="quizContents">
+        <span class="quizNumber">Q2</span>
+        <span class="quizDescription">既存業界のビジネスと、先進的なテクノロジーを結びつけて生まれた、新しいビジネスのことをなんと言うでしょう？</span>
+      </h2>
+      <div class="quizPeople">
+        <img src="/img/quiz/img-quiz02.png" alt="" class="quizOneImg">
+      </div>
+      
+      <span class="quizAnswer">A</span>
+      <div class="quizAnswerWrapper" >
+      <button class="quizChoice"  id="quizChoiceJs">
+        INTECH
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      <button class="quizChoice"  id="quizChoiceJs">
+        BIZZTECH
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      <button class="quizChoice"id="quizChoiceJs">
+        X-TECH
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      </div>
+      <div id="quizResult"></div>
+    </div>
+  </section> -->
+
+
+
+  <!-- <section>
+    <div class="quizWrapper">
+      <h2 class="quizContents">
+        <span class="quizNumber">Q3</span>
+        <span class="quizDescription">IoTとは何の略でしょう？
+        </span>
+      </h2>
+      <div class="quizPeople">
+        <img src="/img/quiz/img-quiz03.png" alt="" class="quizOneImg">
+      </div>
+    
+      <span class="quizAnswer">A</span>
+      <div class="quizAnswerWrapper">
+      <button class="quizChoice" id="quizChoiceJs">
+        Internet of Things
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      <button class="quizChoice" id="quizChoiceJs">
+        Integrate into Technology
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      <button class="quizChoice" id="quizChoiceJs">
+        Information on Tool
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      </div>
+      <div id="quizResult"></div>
+    </div>
+  </section>
+
+
+  
+  <section>
+    <div class="quizWrapper">
+      <h2 class="quizContents">
+        <span class="quizNumber">Q4</span>
+        <span class="quizDescription">イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？</span>
+      </h2>
+      <div class="quizPeople">
+        <img src="/img/quiz/img-quiz04.png" alt="" class="quizOneImg">
+      </div>
+    
+      <span class="quizAnswer">A</span>
+      <div class="quizAnswerWrapper">
+      <button class="quizChoice" id="quizChoiceJs">
+        Society 5.0
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      <button class="quizChoice" id="quizChoiceJs">
+        CyPhy
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      <button class="quizChoice" id="quizChoiceJs">
+        SDGs
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      </div>
+      <div class="quizCiteBox">
+        <img src="/img/icon/icon-note.svg" alt="">
+        <p> Society5.0 - 科学技術政策 - 内閣府</p>
+      </div>
+      <div id="quizResult"></div>
+    </div>
+  </section>
+  
+
+  <section>
+    <div class="quizWrapper">
+      <h2 class="quizContents">
+        <span class="quizNumber">Q5</span>
+        <span class="quizDescription">イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？</span>
+      </h2>
+      <div class="quizPeople">
+        <img src="/img/quiz/img-quiz05.png" alt="" class="quizOneImg">
+      </div>
+    
+      <span class="quizAnswer">A</span>
+      <div class="quizAnswerWrapper">
+      <button class="quizChoice" id="quizChoiceJs">
+        Web3.0
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      <button class="quizChoice" id="quizChoiceJs">
+        NFT
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      <button class="quizChoice" id="quizChoiceJs">
+        メタバース
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      </div>
+      <div id="quizResult"></div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="quizWrapper">
+      <h2 class="quizContents">
+        <span class="quizNumber">Q6</span>
+        <span class="quizDescription">先進テクノロジー活用企業と出遅れた企業の収益性の差はどれくらいあると言われているでしょうか？</span>
+      </h2>
+      <div class="quizPeople">
+        <img src="/img/quiz/img-quiz06.png" alt="" class="quizOneImg">
+      </div>
+    
+      <span class="quizAnswer">A</span>
+      <div class="quizAnswerWrapper">
+      <button class="quizChoice" id="quizChoiceJs">
+        約2倍
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      <button class="quizChoice" id="quizChoiceJs">
+        約5倍
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      <button class="quizChoice" id="quizChoiceJs">
+        約11倍
+        <i class="iconArrow"><img src="/img/icon/icon-arrow.svg" alt=""></i>
+      </button>
+      </div>
+      <div id="quizResult"></div>
+      <div class="quizCiteBox">
+        <img src="/img/icon/icon-note.svg" alt="">
+        <p> Technology Vision 2021</p>
+      </div>
+    </div>
+  </section> --> -->
+
+
+  <!-- ここからline -->
+  <section class="lineSection">
+    <div class="lineInner">
+      <div class="lineContents">
+        <div class="lineTitles">
+          <div class="lineIcon">
+            <img src="/img/icon/icon-line.svg" alt="lineicon">
+          </div>
+          <h2 class="posseOfficialLine">POSSE公式LINE</h2>
+        </div>
+          <div class="lineDescription">
+            <br>公式LINEにてご質問を随時受け付けております。</br>
+            <br>詳細やPOSSE最新情報につきましては、公式LINEにてお知らせ致します。</br>
+            <br>下記ボタンより友達追加をお願いします！</br>
+          </div>
+          <div class="lineLink">
+            <div class="lineAdd">LINE追加</div>
+            <!-- <i class="lineLinkIcon"><img src="/icon/icon-link-dark.svg" alt=""></i> -->
+          </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer" role="contentinfo">
+    <div class="footerWrapper">
+        <span class="footerImg">
+          <img src="/img/logo.svg" alt="POSSEロゴ">
+        </span>
+        <div class="footerSite">
+          <p>POSSE公式サイト</p>
+        </div>
+      <div class="iconWrapper">
+        <div class="twitterIcon">
+          <a href=""><img src="/img/icon/icon-twitter.svg" alt="twitter"></a>
+        </div>
+        <div class="instagramIcon">
+          <a href=""><img src="/img/icon/icon-instagram.svg" alt="instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footerBottom">
+      ©︎2022 POSSE
+    </div>
+  </footer>
+
+</main>
+</body>
+
+
+</html>

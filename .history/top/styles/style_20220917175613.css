@@ -1,0 +1,615 @@
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+hd{
+  font-family: Noto Sans JP;
+}
+body{
+  width: 100%;
+}
+
+
+header{
+  position: fixed; 
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 24px;
+  z-index: 100;
+  background-color: #FFFFFF;
+}
+.logoArea{
+  margin-top: 26px;
+  margin-left: 24px;
+}
+.logoListPC{
+  margin-top: 30px;
+  display: flex;
+}
+
+
+.logoListPC li{
+  margin-right: 32px;
+  color: #666666;
+}
+.logoListPC li:last-child(3),
+.logoListPC li:last-child(4){
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+  margin-top: -5px;
+}
+.logoList{
+  display: none;
+}
+/* ここからheroSection */
+.heroSection{
+  text-align: right;
+  width: auto;
+  height: auto;
+
+}
+
+.heroImg img {
+  max-width: 976px;
+  width: 100%;
+  height: auto;
+  border-radius: 80px 0 0 80px;
+}
+.heroInner{
+
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  text-align: center;
+  padding: 40px;
+  margin-top: -480px ;
+  margin-left: 120px;
+  position: relative;
+  background-color: #EFF2F5; 
+}
+
+
+.heroDescription{
+  color: #0071bc;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.heroBest{
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 180%;
+    margin-top: 10px;
+}
+.heroScroll{
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  float: bottom left;
+  margin: 0 0 24px 126px;
+}
+
+/* ここからaboutposse */
+.aboutPosse{
+  margin-top: 300px;
+}
+.aboutPosseJpn{
+  /* display: block; */
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  margin: 0 auto;
+}
+.aboutPosseEng{
+  /* display: block; */
+  color: #0071bc;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25.2px;
+  margin: 0 auto;
+
+}
+.aboutPosseContents{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 80px;
+
+
+}
+.aboutImg img{
+  /* max-height: 312px; */
+  max-width: 472px;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+}
+
+.aboutPosseDescription{
+  max-width: 472px;
+  width: 100%;
+  height: auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  margin: auto 0;
+}
+
+
+
+
+
+
+
+/* ここからlineSection */
+.lineSection{
+  max-width: 984px;
+  width: 100%;
+  /* height: 357px; */
+  height: auto;
+
+  margin: 80px auto;
+  position: relative;
+}
+.lineInner{
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/bg-line.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 48px;
+}
+.lineInner:before{
+content:"";
+display: block;
+width: 100%;
+height: 100%;
+position: absolute;
+background-color:  #0071bc; 
+opacity: 0.9;
+border-radius: 48px;
+
+}
+.lineContents{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  gap:20px;
+}
+
+.lineTitles{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 40px 0 0 0;
+  z-index: 3;
+}
+.lineIcon, .lineIcon2{
+  width: 40px;
+  height: 40px;
+  background:radial-gradient(#FFFFFF 60%, rgba(248, 249, 249, 0) 40%);
+}
+.posseOfficialLine{
+  max-width: fit-content;
+  width: 100%;
+  font-weight: 700;
+  font-size: 33px;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+}
+.lineDescription{
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+  top: 120px; 
+  color: #FFFFFF;
+  line-height: 15px ;
+  font-size : 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.lineLink{
+  z-index: 3;
+  background-color: #FFFFFF;
+  padding: 12px;
+  border-radius: 98px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  max-width: 320px;
+  width: 100%;
+  line-height: 8px;
+  color: #666666;
+  left: 320px;
+  line-height: 40px;
+  margin: 18px 0px;
+}
+.fixedBanner{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  background-color: #5FDF5B;
+  color: #FFFFFF;
+  width: 288px;
+  height: 80px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  z-index: 3;
+}
+.footerWrapper{
+  /* padding: 56px 24px 48px; */
+  text-align: center;
+  border-style: solid;
+  border-color: #EEEEEE;
+  border-left: transparent;
+  border-right: transparent;
+}
+.twitterIcon,.instagramIcon{
+  display: inline-flex;
+  border-style: solid;
+  border-color: #EEEEEE;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+/* ここからfooter */
+
+.footerSite{
+  color: #666666;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 180%;
+  margin: 24px 0px 0px;
+}
+.footerBottom{
+  text-align: center;
+  color: #666666;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  padding: 32px;
+}
+
+@media screen and (max-width: 768px){     
+    header{
+      position: relative;
+      margin: -18px;
+      padding: 0;
+    }
+    body{
+      padding: 0;
+    }
+
+    .logoList{
+      display: none;
+      position: fixed;
+      flex-direction: column;
+      align-items: center;
+      top:0;
+      left:0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+      margin-top: 0;
+      z-index: 1;
+    }
+
+
+
+
+    .flex {
+      display: flex;
+    }
+    .logoListPC{
+      display: none;
+    }
+
+    .openbtn2{
+      position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+      width: 20px;
+        height:50px;
+      cursor: pointer;
+      background:#fff;
+    }
+      
+    /*ボタン内側*/
+    
+    .openbtn2 span{
+        display: inline-block;
+        transition: all .4s;/*アニメーションの設定*/
+        position: absolute;
+        right:0px;
+        height: 2px;
+        z-index: 3;
+      background-color: #666;
+      }
+    
+    
+    .openbtn2 span:nth-of-type(1) {
+      top:55px; 
+        width: 52px;
+    }
+    
+    .openbtn2 span:nth-of-type(2) {
+      top:70px;
+        width:52px;
+    }
+    
+    /*activeクラスが付与されると線が回転して×に*/
+    
+    .openbtn2.active span:nth-of-type(1) {
+        top: 70px;
+        right:0;
+        transform: translateY(6px) rotate(-45deg);
+        /* width: 20%; */
+    }
+    
+    .openbtn2.active span:nth-of-type(2) {
+        top: 82px;
+        right:0;
+        transform: translateY(-6px) rotate(45deg);
+        /* width: 20%; */
+    }
+    .button {
+      /* background: lightblue; */
+      color: #fff;
+      padding: 0 2em;
+      border: 0;
+      width: 100vw;
+      height: 100px;
+      font-size: 45px;
+      border-radius: 5px;
+      font-weight: 900;
+      /* position: relative;
+      left: 400px;
+      top: 260px; */
+      font-family: serif;
+    }
+    
+    .button:hover {
+      /* background: lightcoral; */
+      cursor: pointer;
+    }
+    
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+    
+    .modal-content {
+      background-color: #f4f4f4;
+      margin: 20% auto;
+      width: 50%;
+      box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+      animation-name: modalopen;
+      animation-duration: 1s;
+    } */
+
+    
+    /* @keyframes modalopen {
+      from {opacity: 0}
+      to {opacity: 1}
+    } 
+    
+    .modal-header h1 {
+      margin: 1rem 0;
+    }
+    
+    .modal-header {
+      background: lightblue;
+      padding: 3px 15px;
+      display: flex;
+      justify-content: space-between;
+    } 
+    
+    .modalClose {
+      display: none;
+      font-size: 2rem;
+    }
+    .modalDisplay{
+      display: block;
+    }
+    
+    .modalClose:hover {
+      cursor: pointer;
+    }  */
+    
+    /* .modal-body {
+      padding: 10px 20px;
+      color: black;
+    } */
+ 
+    /* body{
+        padding:20px;
+    } */
+    
+    
+    a{
+      color: #333;
+      text-decoration: none;
+    }
+    
+    .lead{
+      margin:20px 0 0 0;
+    }
+    
+    .btn-block{
+      width:200px;  
+      padding: 30px;
+    }
+
+    .heroSection{
+      display: block;
+      margin-top: 100px;
+    }
+    
+    .heroImg img{
+      /* margin-left: -18px; */
+      border-radius: 0;
+      /* object-fit: fill; */
+    }
+    
+    .heroInner{
+      width: 100%;
+      height: auto;
+      padding: 40px;
+      margin: -40px auto 0;
+    }
+  .heroBest{
+    font-size: 40px;
+    line-height: 150%;
+    font-weight: 700;
+    /* margin-left: 12px; */
+  }
+  .heroBest br{
+    display: none;
+  }
+  .heroDescription{
+    font-size: 12px;
+    line-height: 21.6px;
+    margin-bottom: 40px;
+    /* margin:12px; */
+  }
+
+  /* ここからPOSSEとは */
+
+  .aboutPosse{
+    margin-top: 100px;
+  }
+  .aboutPosseJpn{
+    display: block;
+  }
+  .aboutPosseEng{
+    display: block;
+  }
+
+  .aboutPosseContents{
+    display: block;
+    padding: 0px;
+  }
+  .aboutImg{
+    text-align: center;
+  }
+  .aboutImg img{
+    object-fit: contain;
+    width: 100%;
+  }
+  
+  
+  .aboutPosseDescription{
+    display: block;
+    margin-top: 20px;
+    margin: 40px auto 0;
+    /* text-align: center; */
+  }
+
+  /* ここからLINE */
+
+.lineSection{
+  width: 80%;
+}
+  .lineTitles{
+    display: block;
+  }
+    .lineContents{
+    gap:0px
+  }
+ 
+  .lineIcon{
+    margin: 0 auto 20px;
+  }
+
+
+  .posseOfficialLine{
+    margin: 20px auto;
+  }
+  .lineLink{
+    width: 295px;
+    height: 30px;
+    left:8px;
+    top:260px;
+  }
+
+  
+  .footerWrapper{
+    position: absolute;
+    top: 2200px;
+    width: 100vw;
+    margin: 0 auto;
+    }
+  .fixedBanner{
+    display: flex;
+    width: 100vw;
+    height: 60px;
+    border-radius: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+  }
+  .bannerDescription br{
+    display: none;
+  }
+
+
+
+}
+@media screen and (max-width: 375px){
+.heroInner{
+  padding: 20px 0px;
+  width: 90%;
+}
+.heroDescription{
+  margin-bottom: 0;
+}
+.heroBest{
+  font-size: 28px;
+
+}
+.lineDescription{
+  text-align: left;
+  width: 80%;
+  /* padding: 12px; */
+}
+.lineLink{
+  width: 80%;
+}
+.footerWrapper{
+  top:1800px;
+  padding: 0;
+}
+}
+
+

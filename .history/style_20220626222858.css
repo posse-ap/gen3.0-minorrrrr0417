@@ -1,0 +1,84 @@
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+
+
+header{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  }
+.logoArea{
+  margin-top: 26px;
+  margin-left: 24px;
+}
+.logoList{
+  display: flex;
+  margin: top;
+}
+.logoList ul{
+  display: flex;
+}
+.logoList ul li{
+  margin-right: 32px;
+  color: #666666;
+}
+.logoList ul li:last-child(3),
+.logoList ul li:last-child(4){
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+  margin-top: -5px;
+}
+.lineSection{
+  max-width: 984px;
+  width: 100%;
+  height: 357px;
+  margin: 0 auto;
+}
+.lineInner{
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets-ph1-website/img/bg-line.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius:48px ;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+.lineInner:before{
+content:"";
+display: block;
+width: 100%;
+height: 100%;
+position: absolute;
+background-color:  #0071bc; 
+opacity: 0.9;
+}
+.lineIcon{
+  position: absolute;
+ width: 40px;
+ height: 40px;
+ top: 81px;
+ left: 327px;
+ display: flex;
+}
+h1{
+  position: absolute ;
+  font-weight: 700;
+  size: 36px;
+  line-height: 64.8px;
+  align-items: center;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  color: #FFFFFF;
+  display: flex;
+}

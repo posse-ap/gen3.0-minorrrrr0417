@@ -1,0 +1,412 @@
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+head{
+  font-family: Noto Sans JP;
+}
+
+
+header{
+  position: fixed; 
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 24px;
+  z-index: 100;
+  background-color: #FFFFFF;
+}
+.logoArea{
+  margin-top: 26px;
+  margin-left: 24px;
+}
+.logoList{
+  margin-top: 30px;
+}
+
+.logoList ul{
+  display: flex;
+}
+.logoList ul li{
+  margin-right: 32px;
+  color: #666666;
+}
+.logoList ul li:last-child(3),
+.logoList ul li:last-child(4){
+  width: 50px;
+  height: 50px;
+  margin-right: 16px;
+  margin-top: -5px;
+}
+/* ここからheroSection */
+.heroSection{
+  text-align: right;
+}
+.heroImg img {
+  max-width: 976px;
+  max-height: 680px;
+  width: 100%;
+  height: auto;
+  border-radius: 80px 0 0 80px;
+  position: relative;
+}
+.heroInner{
+  position :absolute;
+  top: 280px;
+  left: 120px;
+  /* margin: -480px -800px 0 0 ; */
+  max-width: 500px;
+  width: 100%;
+  max-height: 281px;
+  height: 100%;
+  background-color: #EFF2F5;
+  border-radius: 24px;
+  text-align: center;
+  padding: 20px;
+}
+.heroDescription{
+  color: #0071bc;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.8;
+  margin: 50px 0 0;
+}
+.heroBest{
+  display: inline-block;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 80px;
+    margin-top: 10px;
+    
+}
+.heroScroll{
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  float: bottom left;
+  margin: 0 0 24px 126px;
+}
+
+/* ここからaboutposse */
+.aboutPosseJpn{
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  margin: 0 auto;
+}
+.aboutPosseEng{
+  display: block;
+  color: #0071bc;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25.2px;
+  margin: 0 auto;
+
+}
+.aboutPosseContents{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px;
+  margin: 8px;
+  min-width: 472px;
+}
+.aboutImg img{
+  max-height: 312px;
+  width: 100%;
+  /* height: 100%; */
+  border-radius: 24px;
+}
+.aboutPosseDescription{
+  width: 472px;
+  height: 175px;
+  /* height: 100%; */
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  margin: auto 0;
+}
+
+
+
+
+
+
+
+/* ここからlineSection */
+.lineSection{
+  max-width: 984px;
+  width: 100%;
+  height: 357px;
+  margin: 80px auto;
+  position: relative;
+}
+.lineInner{
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/bg-line.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 48px;
+}
+.lineInner:before{
+content:"";
+display: block;
+width: 100%;
+height: 100%;
+position: absolute;
+background-color:  #0071bc; 
+opacity: 0.9;
+border-radius: 48px;
+
+}
+.lineContents{
+  width: 100%;
+  text-align: center;
+}
+
+.lineTitles{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 40px 0 0 0;
+}
+.lineIcon{
+  width: 40px;
+  height: 40px;
+  background:radial-gradient(#FFFFFF 60%, rgba(248, 249, 249, 0) 40%);
+}
+.posseOfficialLine{
+  max-width: fit-content;
+  width: 100%;
+  font-weight: 700;
+  font-size: 33px;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+}
+.lineDescription{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 120px; 
+  color: #FFFFFF;
+  line-height: 15px ;
+  font-size : 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.lineLink{
+  position: absolute;
+  top: 240px;
+  background-color: #FFFFFF;
+  padding: 12px;
+  border-radius: 98px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  max-width: 320px;
+  width: 100%;
+  line-height: 8px;
+  color: #666666;
+  left: 320px;
+  line-height: 40px;
+}
+.fixedBanner{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  background-color: #5FDF5B;
+  color: #FFFFFF;
+  width: 288px;
+  height: 80px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+}
+.footerWrapper{
+  padding: 56px 24px 48px;
+  text-align: center;
+  border-style: solid;
+  border-color: #EEEEEE;
+  border-left: transparent;
+  border-right: transparent;
+}
+.twitterIcon,.instagramIcon{
+  display: inline-flex;
+  border-style: solid;
+  border-color: #EEEEEE;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+/* ここからfooter */
+
+.footerSite{
+  color: #666666;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 180%;
+  margin: 24px 0px 0px;
+}
+.footerBottom{
+  text-align: center;
+  color: #666666;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  padding: 32px;
+}
+
+@media (max-width: 480px){ 
+  /* img html{
+    width: 100% ;
+    } */
+    body{
+      min-width: 390px;
+      width: 100%;
+      height: auto;
+    }
+    header{
+      width: 100%;
+    }
+
+    .heroSection{
+      position:relative;
+    }
+    
+    .heroImg img{
+      /* margin-top: 160px; */
+      /* border-radius: none; */
+    }
+    
+    .heroInner{
+      /* min-width: 390px; */
+      width: 100%;
+      max-height: 110px;
+      height: auto;
+      position:absolute;
+      border-radius: 20px;
+    }
+  .heroBest{
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .heroDescription{
+    font-size: 12px;
+    line-height: 21.6px;
+    margin:auto;
+  }
+  .aboutPosse{
+    position: absolute;
+    top:600px;
+    max-width: 480px;
+    width: 100%;
+  }
+  .aboutPosseContents{
+    display: block;
+    min-width: 343px;
+    width: 100%;
+    height: 228px;
+    padding: 0%;
+    margin: 10px auto;
+  }
+  
+  
+  .aboutPosseDescription{
+    width: 100%;
+    padding: 4px;
+  }
+
+  .lineSection{
+    top: 640px;
+    width: 343px;
+    height: 372px;
+    /* display: block; */
+  }
+  .lineTitles{
+    display: block;
+    
+  }
+  .lineIcon{
+    margin: 0 auto 20px;
+  }
+
+  .posseOfficialLine{
+    margin: 20px auto;
+  }
+  .lineLink{
+    text-align: center;
+    width: 295px;
+    height: 50px;
+    position: absolute;
+    left:12px;
+    top:260px;
+    /* width: 100%; */
+  }
+  .lineDescription{
+    margin: 10px auto;
+  }
+  
+  .footerWrapper{
+    position: absolute;
+    top: 1600px;
+    width: 390px;
+    padding: 0;
+    }
+  .fixedBanner{
+    width: 100%;
+    height: 60px;
+    /* display: flex; */
+    /* justify-content: center; */
+    border-radius: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: none;
+    background-color: none;
+    background-color: #5FDF5B;
+  /* display: flex;
+  justify-content: space-around; */
+    
+  }
+  .logoList{
+    display: none;
+  }
+  
+  
+  
+    
+}
+  
+
+
+
+
+
+
+
+
+    
+    
+
+

@@ -1,0 +1,24 @@
+.headerInner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+.logoImg{
+  position: relative;
+ 
+}
+
+/* .logoArea{
+  position: absolute;
+  left: 0%;
+  right: 48.12%;
+  top: 0%;
+  bottom: 12%;
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  /* line-height: 160% * */
+  }

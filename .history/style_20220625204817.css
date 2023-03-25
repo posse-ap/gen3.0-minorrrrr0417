@@ -1,0 +1,14 @@
+headerInner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space ;
+  
+}
+nav{
+  display: flex ;
+  justify-content: space-between;
+}
+
+/* .logoArea{
+display: justify-content ;
+} */
